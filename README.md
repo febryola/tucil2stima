@@ -1,5 +1,4 @@
-# Implementasi Convex Hull untuk Visualisasi Tes Linear Separability Dataset 
-# dengan Algoritma Divide and Conquer
+# Implementasi Convex Hull untuk Visualisasi Tes Linear Separability Dataset dengan Algoritma Divide and Conquer
 Tugas Kecil 2 IF2211 Strategi Algoritma Semester II Tahun 2021/2022
 
 Menyelesaikan Permasalahan Convex Hull Dengan Menggunakan Algoritma Divide and Conquer
@@ -7,7 +6,7 @@ Menyelesaikan Permasalahan Convex Hull Dengan Menggunakan Algoritma Divide and C
 ## Table of Contents
 * [General Information](#general-information)
 * [Setup and Requirements](#setup-and-requirements)
-* [Usage](#usage)
+* [Message](#message)
 * [Contact](#contact)
 
 ## General Information
