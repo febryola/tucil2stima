@@ -24,9 +24,11 @@ lakukan pip install "nama package"
 2. numpy==1.22.2
 3. pandas==1.4.1
 4. scikit-learn==1.0.2
+
 ## Setup
 Program dapat dicompile secara online melalui jupyter notebook (ipynb) ataupun di terminal teks editor seperti vs code dan akan menampilkan contoh output seperti berikut ini:
 <img src="tampilanAwal.jpg" />
+
 Pada output tersebut akan ditampilkan menu utama program, dan pada menu terdapat
 pilihan-pilihan dataset yang dapat digunakan pada program ini. Tinggal jalankan
 file mainProgram.py maka program akan berjalan dan dapat menampilkan figure dari convex hull yang dipilih. Saat memilih menu, maka user akan diminta untuk menginputkan beberapa hal berikut:
@@ -36,7 +38,7 @@ file mainProgram.py maka program akan berjalan dan dapat menampilkan figure dari
    dan akan masuk ke folder output
 4. file yang masuk pada folder output akan langsung 2, yaitu file dari convex hull python dengan
    tambahan nama "python dibelakangnya" dan file convexhull buatan sendiri
-   contoh penamaanya adalah yola.jpg dan yolapython.png yang sudah terdapat pada folder output
+   contoh penamaanya adalah yola.png dan yolapython.png yang sudah terdapat pada folder output
 5. program juga akan difigure secara langsung
 6. silakan tekan x pada figure maka program akan berakhir
 7. SELAMAT MENCOBA
@@ -64,6 +66,7 @@ Untuk dapat menjalankan program ini sangat mudah:
  - mainProgram.py = program utama
  - readData.py = dataset yang diujikan
  - VisualisasiConvexHull.ipynb = visualisasi data dalam bentuk ipynb
+ 
 ## Message
 Tucil oh tucillllllllll
 asikk bangett bisa ada tugas dan bisa implementasiin materi yang ada di kelas secara langsung
