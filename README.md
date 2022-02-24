@@ -53,8 +53,8 @@ Untuk dapat menjalankan program ini sangat mudah:
 5. lalu install semua dependency yang diperlukan dengan menggunakan command
    "pip install ..." 
 6. ... dapat diisi dengan modul yang diperlukan seperti numpy dan ipynb
-7. Cara menggunakan terminal ini telah dijelaskan pada poin sebelumnya
-
+7. Cara menggunakan terminal ini telah dijelaskan pada poin sebelumnya, contohnya berikut:
+<img src="output.jpg" />
 ## Organogram
 1.output = berisikan file jpg dari figure yang ditesting 
   terdapat 2 file, yaitu file convexhull buatan sendiri dan file convexhull dari python
