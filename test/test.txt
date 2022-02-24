@@ -1,0 +1,5 @@
+Dataset yang digunakan untuk Pengujian Pada Program ini:
+1. Dataset iris
+2. Dataset digits
+3. Dataset wine
+4. Dataset breast_cancer
