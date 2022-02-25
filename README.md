@@ -5,7 +5,7 @@ Menyelesaikan Permasalahan Convex Hull Dengan Menggunakan Algoritma Divide and C
 
 ## Table of Contents
 * [General Information](#general-information)
-* [Requirements](#requirements)
+* [Requirement](#requirement)
 * [Setup](#setup)
 * [Organogram](#organogram)
 * [Message](#message)
