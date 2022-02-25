@@ -1,9 +1,8 @@
+import pandas as pd
 import matplotlib.pyplot as plt
 import random
-import pandas as pd
 from scipy.spatial import ConvexHull
 from MyConvexHull import MyConvexHull
-from readData import *
 
 def header():
     print("""\033[33m
@@ -92,17 +91,69 @@ def terimakasih():
   █▄▄▄█ █▄▄▄▄▄▄▄█▄▄▄█  █▄█▄▄▄█▄█   █▄█▄█ █▄▄█  █▄▄▄█ █▄█▄█ █▄▄█▄▄▄▄▄▄▄█▄▄▄█▄▄█ █▄▄█
 
     \033[0m""")
-    
-def buatanSendiri(df, graphtitle, xlabel, ylabel, xrow, yrow, labelnames, namafile):
+
+def iris():
+        from sklearn import datasets
+        data = datasets.load_iris()
+        df = pd.DataFrame(data.data, columns=data.feature_names)
+        df['label'] = pd.DataFrame(data.target)
+        print(df.shape)
+        print(df.head)
+        kolom1 = int(input("Masukkan pasangan kolom 1: "))
+        kolom2 = int(input("Masukkan pasangan kolom 2: "))
+        namafile = input("Masukkan nama file yang diinginkan: ")
+        buatanPython(df, "Library Python Spicy",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile+"python")
+        buatanSendiri(df, "Library MyConvexHull",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile)
+
+def digits():
+        from sklearn import datasets
+        data = datasets.load_digits()
+        df = pd.DataFrame(data.data, columns=data.feature_names)
+        df['label'] = pd.DataFrame(data.target)
+        print(df.shape)
+        print(df.head)
+        kolom1 = int(input("Masukkan pasangan kolom 1: "))
+        kolom2 = int(input("Masukkan pasangan kolom 2: "))
+        namafile = input("Masukkan nama file yang diinginkan: ")
+        buatanPython(df, "Library Python Spicy",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile+"python")
+        buatanSendiri(df, "Library MyConvexHull",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile)
+
+def wine():
+        from sklearn import datasets
+        data = datasets.load_wine()
+        df = pd.DataFrame(data.data, columns=data.feature_names)
+        df['label'] = pd.DataFrame(data.target)
+        print(df.shape)
+        print(df.head)
+        kolom1 = int(input("Masukkan pasangan kolom 1: "))
+        kolom2 = int(input("Masukkan pasangan kolom 2: "))
+        namafile = input("Masukkan nama file yang diinginkan: ")
+        buatanPython(df, "Library Python Spicy",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile+"python")
+        buatanSendiri(df, "Library MyConvexHull",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile)
+
+def breast_cancer():
+        from sklearn import datasets
+        data = datasets.load_breast_cancer()
+        df = pd.DataFrame(data.data, columns=data.feature_names)
+        df['label'] = pd.DataFrame(data.target)
+        print(df.shape)
+        print(df.head)
+        kolom1 = int(input("Masukkan pasangan kolom 1: "))
+        kolom2 = int(input("Masukkan pasangan kolom 2: "))
+        namafile = input("Masukkan nama file yang diinginkan: ")
+        buatanPython(df, "Library Python Spicy",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile+"python")
+        buatanSendiri(df, "Library MyConvexHull",data.feature_names[kolom1],data.feature_names[kolom2],kolom1,kolom2,data.target_names,namafile)
+
+def buatanSendiri(df, judul, xlabel, ylabel,xkolom, ykolom, labelnames, namafile):
     plt.figure(figsize = (10, 6))
     labelsize = len(df['label'].unique())
     warna = fungsiWarna(labelsize)
-    plt.title(graphtitle)
+    plt.title(judul)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
     for i in range(labelsize):
         bucket = df[df['label'] == i]
-        bucket = bucket.iloc[:,[xrow,yrow]].values
+        bucket = bucket.iloc[:,[xkolom,ykolom]].values
         hull = MyConvexHull(bucket)
         plt.scatter(bucket[:, 0], bucket[:, 1], label=labelnames[i], color=warna[i])
         for simplex in hull:
@@ -111,18 +162,18 @@ def buatanSendiri(df, graphtitle, xlabel, ylabel, xrow, yrow, labelnames, namafi
     plt.savefig('output/' + namafile)
     plt.show()
 
-def buatanPython(df, graphtitle, xlabel, ylabel, xrow, yrow, labelnames, namafile):
+def buatanPython(df, judul, xlabel, ylabel,xkolom, ykolom, labelnames, namafile):
     plt.figure(figsize = (10, 6))
     labelsize = len(df['label'].unique())
     warna = fungsiWarna(labelsize)
 
-    plt.title(graphtitle)
+    plt.title(judul)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
 
     for i in range(labelsize):
         bucket = df[df['label'] == i]
-        bucket = bucket.iloc[:,[xrow,yrow]].values
+        bucket = bucket.iloc[:,[xkolom,ykolom]].values
         hull = ConvexHull(bucket)
         plt.scatter(bucket[:, 0], bucket[:, 1], label=labelnames[i], color=warna[i])
         for simplex in hull.simplices:
@@ -147,3 +198,4 @@ if __name__ == "__main__":
     selamatDatang()
     menu()
     terimakasih()
+

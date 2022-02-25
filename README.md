@@ -64,7 +64,6 @@ Untuk dapat menjalankan program ini sangat mudah:
  - Function.py = berisi fungsi-fungsi dasar pembentuk MyConvexHull
  - MyConvexHull.py = fungsi utama MyConvexHull
  - mainProgram.py = program utama
- - readData.py = dataset yang diujikan
  - VisualisasiConvexHull.ipynb = visualisasi data dalam bentuk ipynb
  
 ## Message
