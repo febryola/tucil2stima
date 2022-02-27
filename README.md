@@ -59,9 +59,8 @@ Untuk dapat menjalankan program ini sangat mudah:
 ## Organogram
 1. output = berisikan file jpg dari figure yang ditesting 
   terdapat 2 file, yaitu file convexhull buatan sendiri dan file convexhull dari python
-2. test = berisi file test.txt yang berisikan dataset yang digunakan pada testing
-3. readme
-4. src
+2. readme
+3. src
  - Function.py = berisi fungsi-fungsi dasar pembentuk MyConvexHull
  - MyConvexHull.py = fungsi utama MyConvexHull
  - mainProgram.py = program utama
