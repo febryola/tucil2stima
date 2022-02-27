@@ -151,11 +151,13 @@ def buatanSendiri(df, judul, xlabel, ylabel,xkolom, ykolom, labelnames, namafile
     plt.title(judul)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
+    print("Titik-titik yang berada pada convex hull sebagai berikut:")
     for i in range(labelsize):
         bucket = df[df['label'] == i]
         bucket = bucket.iloc[:,[xkolom,ykolom]].values
         hull = MyConvexHull(bucket)
         plt.scatter(bucket[:, 0], bucket[:, 1], label=labelnames[i], color=warna[i])
+        print(hull)
         for simplex in hull:
             plt.plot(bucket[simplex, 0], bucket[simplex, 1], color=warna[i])
     plt.legend()
