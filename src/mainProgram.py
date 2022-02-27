@@ -147,7 +147,7 @@ def breast_cancer():
 def buatanSendiri(df, judul, xlabel, ylabel,xkolom, ykolom, labelnames, namafile):
     plt.figure(figsize = (10, 6))
     labelsize = len(df['label'].unique())
-    warna = fungsiWarna(labelsize)
+    warna = fungsiWarna2(labelsize)
     plt.title(judul)
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -165,7 +165,7 @@ def buatanSendiri(df, judul, xlabel, ylabel,xkolom, ykolom, labelnames, namafile
 def buatanPython(df, judul, xlabel, ylabel,xkolom, ykolom, labelnames, namafile):
     plt.figure(figsize = (10, 6))
     labelsize = len(df['label'].unique())
-    warna = fungsiWarna(labelsize)
+    warna = fungsiWarna1(labelsize)
 
     plt.title(judul)
     plt.xlabel(xlabel)
@@ -181,8 +181,18 @@ def buatanPython(df, judul, xlabel, ylabel,xkolom, ykolom, labelnames, namafile)
     plt.legend()
     plt.savefig('output/' + namafile)
 
-def fungsiWarna(n):
+def fungsiWarna1(n):
     warna = ['b','r','g','c','m','y','k','w']
+    if n > len(warna):
+        for i in (range(n-len(warna))):
+            r = random.random()
+            g = random.random()
+            b = random.random()
+            warna.append((r, g, b))
+    return warna
+
+def fungsiWarna2(n):
+    warna = ['y','b','m','c','g','y','k','w']
     if n > len(warna):
         for i in (range(n-len(warna))):
             r = random.random()
