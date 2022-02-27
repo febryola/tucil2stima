@@ -54,7 +54,7 @@ def semangat():
     print("""\033[31m"KAMUUUU KERENNNNNNN\033[0m""")
     print("""\033[37m💪 ( ͡❛ ͜ʖ ͡❛) 👊\033[0m""")
     print("""\033[37m( ͡❛ ͜ʖ ͡❛)👌\033[0m""")
-    print("""\033[36mSEMANGAT TERUS YAKKKKKKKKKKKKK\033[0m""")
+    print("""\033[36mSEMANGAT TERUS YAKKKKKKkkkkkKKKKKKK\033[0m""")
 
 def menu():
     print("""\033[37m
